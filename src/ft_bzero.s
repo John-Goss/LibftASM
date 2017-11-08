@@ -4,7 +4,7 @@ section .text
 
 _ft_bzero:
 		push rbp
-		mov rpb, rsp
+		mov rbp, rsp
 		cmp rsi, 0x0
 		je end
 		mov [rdi], byte 0x0

@@ -3,8 +3,8 @@ global _ft_isprint
 section .text
 
 _ft_isprint:
-		push rpb
-		mov rpb, rsp
+		push rbp
+		mov rbp, rsp
 		cmp rdi, 0x20
 		jl false
 		cmp rdi, 0x7e

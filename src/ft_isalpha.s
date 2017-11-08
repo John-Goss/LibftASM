@@ -1,13 +1,12 @@
 global _ft_isalpha
 
 section .text
-		_ft_isalpha
 		extern _ft_islower
 		extern _ft_isupper
 
 _ft_isalpha:
-		push rpb
-		mov rpb, rsp
+		push rbp
+		mov rbp, rsp
 		call _ft_islower
 		cmp rax, 0x1
 		je true

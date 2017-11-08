@@ -3,8 +3,8 @@ global _ft_tolower
 section .text
 
 _ft_tolower:
-		push rpb
-		mov rpb, rsp
+		push rbp
+		mov rbp, rsp
 		mov rax, rdi
 		cmp rax, 0x41
 		jl end

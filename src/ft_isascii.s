@@ -3,8 +3,8 @@ global _ft_isascii
 section .text
 
 _ft_isascii:
-		push rpb
-		mov rpb, rsp
+		push rbp
+		mov rbp, rsp
 		cmp rdi, 0x0
 		jl false
 		cmp rdi, 0x7f

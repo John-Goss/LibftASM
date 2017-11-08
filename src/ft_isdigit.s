@@ -1,11 +1,10 @@
 global _ft_isdigit
 
 section .text
-		_ft_isdigit
 
 _ft_isdigit:
-		push rpb
-		mov rpb, rsp
+		push rbp
+		mov rbp, rsp
 		cmp rdi, 0x0
 		jl false
 		cmp rdi, 0x9
