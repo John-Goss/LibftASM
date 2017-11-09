@@ -97,5 +97,19 @@ int            main(void)
 	printf("%s\n", ft_strcat(str, " et"));
 	printf("%s\n", ft_strcat(str, " ca"));
 	printf("%s\n", ft_strcat(str, " ..."));
+
+	printf("\n---------------------\n");
+	printf("ft_puts:\n");
+	printf("%d\n", puts("fseg"));
+	printf("%d\n", ft_puts("fseg"));
+
+	printf("\n---------------------\n");
+	printf("ft_strlen:\n");
+	printf("%zu = %zu\n", strlen("Test 1"), ft_strlen("Test 1"));
+	printf("%zu = %zu\n", strlen("a"), ft_strlen("a"));
+	printf("%zu = %zu\n", strlen(""), ft_strlen(""));
+	printf("%zu = %zu\n", strlen("Test 123456789"), ft_strlen("Test 123456789"));
+	printf("%zu = %zu\n", strlen("\0Test 123456"), ft_strlen("\0Test 123456"));
+	printf("%zu = %zu\n", strlen("Test 123456\0789"), ft_strlen("Test 123456\0789"));
 	return (0);
 }
