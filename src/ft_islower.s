@@ -1,13 +1,13 @@
-global _ft_isdigit
+global _ft_islower
 
 section .text
 
-_ft_isdigit:
+_ft_islower:
 		push rbp
 		mov rbp, rsp
-		cmp rdi, 0x30
+		cmp rdi, 0x61
 		jl false
-		cmp rdi, 0x39
+		cmp rdi, 0x7a
 		jg false
 		jmp true
 

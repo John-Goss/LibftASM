@@ -5,24 +5,37 @@ section .text
 _ft_strcat:
 		push rbp
 		mov rbp, rsp
+		cmp rdi, 0x0
+		je false
+		cmp rsi, 0x0
+		je false
+		mov rcx, 0x0
 
 s1:
-		cmp [rdi], byte 0x0
-		je s2
-		inc rdi
+		cmp byte [rdi + rcx], 0x0
+		je init
+		inc rcx
 		jmp s1
 
+init:
+		mov r9, 0x0
+
 s2:
-		cmp [rsi], byte 0x0
+		cmp byte [rsi + r9], 0x0
 		je end
-		mov cl, [rsi] ; tmp 8bits register
-		mov [rdi], cl
-		inc rsi
-		inc rdi
+		mov al, byte [rsi + r9] ; tmp 8bits register
+		mov [rdi + rcx], al
+		inc r9
+		inc rcx
 		jmp s2
 
+false:
+		mov rax, rdi
+		leave
+		ret
+
 end:
-		mov [rdi], byte 0x0
+		mov byte [rdi + rcx], 0x0
 		mov rax, rdi
 		leave
 		ret
