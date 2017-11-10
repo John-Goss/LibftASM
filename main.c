@@ -111,5 +111,33 @@ int            main(void)
 	printf("%zu = %zu\n", strlen("Test 123456789"), ft_strlen("Test 123456789"));
 	printf("%zu = %zu\n", strlen("\0Test 123456"), ft_strlen("\0Test 123456"));
 	printf("%zu = %zu\n", strlen("Test 123456\0789"), ft_strlen("Test 123456\0789"));
+
+	printf("\n---------------------\n");
+	printf("ft_memset:\n");
+	char tab[3][3];
+	tab[0][0] = 15;
+	printf("%c\n\n", tab[0][0]);
+	ft_memset(tab[0], 48, 3);
+	ft_memset(tab[1], 72, 3);
+	ft_memset(tab[2], 90, 3);
+	printf("%c = %c\n", tab[0][0], tab[0][2]);
+	printf("%c = %c\n", tab[1][0], tab[1][2]);
+	printf("%c = %c\n", tab[2][0], tab[2][2]);
+
+	// printf("\n---------------------\n");
+	// printf("ft_memcpy:\n");
+	// const char src[10] = "Je test";
+	// tab[0][0] = 15;
+	// printf("%c\n\n", tab[0][0]);
+	// ft_memset(tab[0], 48, 3);
+	// ft_memset(tab[1], 72, 3);
+	// ft_memset(tab[2], 90, 3);
+	// printf("%c = %c\n", tab[0][0], tab[0][2]);
+	// printf("%c = %c\n", tab[1][0], tab[1][2]);
+	// printf("%c = %c\n", tab[2][0], tab[2][2]);
+
+	printf("\n---------------------\n");
+	printf("ft_strdup:\n");
+	printf("%s\n", ft_strdup("Yo"));
 	return (0);
 }
