@@ -6,7 +6,7 @@
 #    By: jle-quer <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/09 11:16:08 by jle-quer          #+#    #+#              #
-#    Updated: 2017/11/09 18:45:41 by jle-quer         ###   ########.fr        #
+#    Updated: 2017/11/10 17:51:03 by jle-quer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,10 @@ SRC =	ft_bzero.s \
 		ft_tolower.s \
 		ft_puts.s \
 		ft_strcat.s \
-		ft_strlen.s
+		ft_strlen.s \
+		ft_memset.s \
+		ft_memcpy.s \
+		ft_strdup.s
 
 OBJ = $(addprefix $(PATH_SRC), $(SRC:%.s=%.o))
 
