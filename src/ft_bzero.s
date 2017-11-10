@@ -10,7 +10,7 @@ _ft_bzero:
 
 loop:
 		cmp rsi, 0x0
-		je end
+		jle end
 		mov byte[rdi], 0x0
 		inc rdi
 		dec rsi
