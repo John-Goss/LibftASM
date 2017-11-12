@@ -24,6 +24,7 @@ SRC =	ft_bzero.s \
 		ft_toupper.s \
 		ft_tolower.s \
 		ft_puts.s \
+		ft_fdputs.s \
 		ft_strcat.s \
 		ft_strlen.s \
 		ft_memset.s \
