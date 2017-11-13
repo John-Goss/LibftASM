@@ -6,7 +6,7 @@
 /*   By: jle-quer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 11:07:49 by jle-quer          #+#    #+#             */
-/*   Updated: 2017/11/13 17:11:13 by jle-quer         ###   ########.fr       */
+/*   Updated: 2017/11/13 17:44:23 by jle-quer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,6 @@ void		*ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
 char		*ft_strdup(const char *s1);
 int			ft_cat(int fd);
 char		*ft_strchr(const char *s, int c);
+int			ft_abs(int d);
 
 #endif
