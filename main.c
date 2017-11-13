@@ -2,6 +2,7 @@
 #include "./include/libftasm.h"
 #include <stdio.h>
 #include <string.h>
+#include <fcntl.h>
 
 char *ft_display_bzero(int i)
 {
@@ -100,8 +101,23 @@ int            main(void)
 
 	printf("\n---------------------\n");
 	printf("ft_puts:\n");
-	printf("%d\n", puts("fseg"));
-	printf("%d\n", ft_puts("fseg"));
+	printf("%d = %d\n", puts(""), ft_puts(""));
+	printf("%d = %d\n", puts(NULL), ft_puts(NULL));
+	printf("%d = %d\n", puts("word"), ft_puts("word"));
+	printf("%d = %d\n", puts("a string"), ft_puts("a string"));
+	printf("%d = %d\n", puts("a loooooooooooooooooooooooooooooooooooooooooooong string"), ft_puts("a loooooooooooooooooooooooooooooooooooooooooooong string"));
+
+	printf("\n---------------------\n");
+	printf("ft_fdputs:\n");
+	int fd = open("fd.txt", O_RDWR | O_APPEND | O_CREAT, 0777);
+	if (fd < 0)
+	{
+		printf("Fail when open O_RDWR fd.txt\n");
+		return (-1);
+	}
+	ft_fdputs("Add this line to STDOUT", 1);
+	ft_fdputs("Add this line to fd.txt", fd);
+	ft_fdputs("A line has added to fd.txt", 1);
 
 	printf("\n---------------------\n");
 	printf("ft_strlen:\n");
@@ -141,11 +157,10 @@ int            main(void)
 	printf("%s\n", ft_strdup("Yo"));
 
 	printf("\n---------------------\n");
-	printf("ft_fdputs:\n");
-
-	printf("\n---------------------\n");
 	printf("ft_strchr:\n");
 	printf("[%s] = [%s]\n", strchr("ABCDEF", 0), ft_strchr("ABCDEF", 0));
+	printf("[%s] = [%s]\n", strchr("ABCDEF", 'D'), ft_strchr("ABCDEF", 'D'));
+	printf("[%s] = [%s]\n", strchr("ABCDEF", -1), ft_strchr("ABCDEF", -1));
 
 	printf("\n---------------------\n");
 	printf("ft_abs:\n");
