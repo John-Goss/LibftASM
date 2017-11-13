@@ -146,5 +146,11 @@ int            main(void)
 	printf("\n---------------------\n");
 	printf("ft_strchr:\n");
 	printf("[%s] = [%s]\n", strchr("ABCDEF", 0), ft_strchr("ABCDEF", 0));
+
+	printf("\n---------------------\n");
+	printf("ft_abs:\n");
+	printf("%d -> %d\n", -123, ft_abs(-123));
+	printf("%d -> %d\n", 123, ft_abs(123));
+	printf("%d -> %d\n", 0, ft_abs(0));
 	return (0);
 }
