@@ -8,7 +8,7 @@ string:
 
 section .text
 
-_ft_puts:
+_ft_fdputs:
 		push rbp
 		mov rbp, rsp
 		cmp rdi, 0x0
