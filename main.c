@@ -145,6 +145,6 @@ int            main(void)
 
 	printf("\n---------------------\n");
 	printf("ft_strchr:\n");
-	printf("[%s] = [%s]\n", strchr("ABCDEF", 'E'), ft_strchr("ABCDEF", 'E'));
+	printf("[%s] = [%s]\n", strchr("ABCDEF", 0), ft_strchr("ABCDEF", 0));
 	return (0);
 }

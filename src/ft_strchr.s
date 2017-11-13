@@ -9,7 +9,7 @@ _ft_strchr:
 		test rdi, rdi
 		jz not_found
 		test rsi, rsi
-		jz not_found
+		jz find_eof
 		push rdi ; Save String addr in stack
 		push rsi ; Save Char to find in stack
 
@@ -36,5 +36,14 @@ _ft_strchr:
 
 not_found:
 		mov rax, 0x0
+		leave
+		ret
+
+find_eof:
+		push rdi
+		call _ft_strlen
+		pop rdi
+		add rdi, rax
+		mov rax, rdi
 		leave
 		ret
