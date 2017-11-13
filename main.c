@@ -139,5 +139,12 @@ int            main(void)
 	printf("\n---------------------\n");
 	printf("ft_strdup:\n");
 	printf("%s\n", ft_strdup("Yo"));
+
+	printf("\n---------------------\n");
+	printf("ft_fdputs:\n");
+
+	printf("\n---------------------\n");
+	printf("ft_strchr:\n");
+	printf("[%s] = [%s]\n", strchr("ABCDEF", 'E'), ft_strchr("ABCDEF", 'E'));
 	return (0);
 }

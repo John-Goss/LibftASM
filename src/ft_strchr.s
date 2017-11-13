@@ -6,20 +6,31 @@ section .text
 _ft_strchr:
 		push rbp
 		mov rbp, rsp
-		cmp rdi, 0x0
-		je not_found
-		cmp, rsi, 0x0
-		je not_found
+		test rdi, rdi
+		jz not_found
+		test rsi, rsi
+		jz not_found
+		push rdi ; Save String addr in stack
+		push rsi ; Save Char to find in stack
 
 		call _ft_strlen
-		cld
-		mov rcx, rax
-		mov al, rsi
+		pop rsi
+		pop rdi
+		push rax ; Save String Len in stack
+		cld ; Clear the RFLAGS
+		mov rax, rsi
+		mov rcx, -1
 		repne scasb
-		test rcx, rcx
-		jz not_found
+
+		not rcx ; Set rcx to absolute value
 		dec rcx
-		mov rax, [rdi + rcx]
+		pop rax ; String Len
+
+		cmp rcx, rax
+		jge not_found
+
+		dec rdi
+		mov rax, rdi
 		leave
 		ret
 
