@@ -6,7 +6,7 @@
 /*   By: jle-quer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 11:07:49 by jle-quer          #+#    #+#             */
-/*   Updated: 2017/11/13 17:44:23 by jle-quer         ###   ########.fr       */
+/*   Updated: 2017/11/15 11:49:07 by jle-quer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,7 @@ char		*ft_strdup(const char *s1);
 int			ft_cat(int fd);
 char		*ft_strchr(const char *s, int c);
 int			ft_abs(int d);
+char		*ft_strnew(size_t size);
+char		*ft_strclr(char *s);
 
 #endif
